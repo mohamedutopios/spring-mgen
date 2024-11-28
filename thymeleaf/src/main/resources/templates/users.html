@@ -9,7 +9,9 @@
 <h1>Liste de User</h1>
 
 <ul>
-    <li th:each=""></li>
+    <li th:each="user : ${users}">
+        <span th:text="${user.name}"> - </span> <span th:text="${user.age}"> years old </span>
+    </li>
 </ul>
 
 
