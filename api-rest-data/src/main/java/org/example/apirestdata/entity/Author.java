@@ -33,7 +33,7 @@ public class Author {
     @Pattern(regexp = ".*\\.com$", message="l'email doit finir par .com")
     private String email;
 
-   @JsonIgnore
+    @JsonIgnore
     @OneToMany(mappedBy = "author",cascade = CascadeType.REMOVE ,orphanRemoval = true)
     private Set<Book> books;
 

@@ -49,4 +49,8 @@ public class AuthorServiceImpl implements AuthorService {
     }
 
 
+    @Override
+    public List<Author> getAuthorsWithOutBooks() {
+        return authorRepository.findAuthorsWithoutBooks();
+    }
 }

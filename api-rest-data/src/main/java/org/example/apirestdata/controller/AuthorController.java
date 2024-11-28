@@ -59,6 +59,12 @@ public class AuthorController {
         return ResponseEntity.noContent().build();
     }
 
+    @GetMapping("/no-books")
+    public ResponseEntity<List<Author>> getAuthorsNoBooks() {
+        List<Author> authors = authorService.getAuthorsWithOutBooks();
+        return ResponseEntity.status(200).body(authors);
+    }
+
 
     private ResponseEntity<Object> getObjectResponseEntity(BindingResult bindingResult) {
         if(bindingResult.hasErrors()){
