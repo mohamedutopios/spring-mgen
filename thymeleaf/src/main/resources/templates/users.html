@@ -8,8 +8,8 @@
 
 <h1>Liste de User</h1>
 
-<ul>
-    <li th:each="user : ${users}">
+<ul th:each="user : ${users}">
+    <li>
         <span th:text="${user.name}"> - </span> <span th:text="${user.age}"> years old </span>
     </li>
 </ul>
