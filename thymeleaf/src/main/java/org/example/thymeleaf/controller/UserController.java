@@ -33,6 +33,20 @@ public class UserController {
         return "users";
     }
 
+    @GetMapping("/condition")
+    public String condition(Model model) {
+        List<User> users = Arrays
+                .asList(
+                        new User("John Connor",50,"active"),
+                        new User("John Smith",40,"banned"),
+                        new User("Jane Doe",67,"inactive"),
+                        new User("Jane Smith",50,"active"),
+                        new User("Nicolas Pitt",34,"inactive"));
+
+        model.addAttribute("users", users);
+        return "condition";
+    }
+
 
 
 
